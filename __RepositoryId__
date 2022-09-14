@@ -1,0 +1,10 @@
+This file is used to uniquely identify this repository for the purposes of dependency management.
+Other repositories that depend on this one will search for this file upon initial setup and
+generate information that is used when activating development environments.
+
+**** PLEASE DO NOT MODIFY, REMOVE, OR RENAME THIS FILE, AS DOING SO WILL LIKELY BREAK OTHER REPOSITORIES! ****
+
+Friendly Name:      Common_DockerDevelopmentMixin
+Id:                 0a7ea49a-6c9d-4537-8f9f-72d2ac0ed10c
+
+Version 4.0.0
