@@ -114,8 +114,9 @@ def BundleRepo(
                 if update_dm.result != 0:
                     update_dm.WriteError(result.output)
                     update_dm.ExitOnError()
-                else:
-                    update_dm.WriteVerbose(result.output)
+
+                with update_dm.YieldVerboseStream() as stream:
+                    stream.write(result.output)
         else:
             with dm.Nested(
                 "Cloning into '{}'...".format(working_dir),
@@ -190,8 +191,9 @@ def BundleRepo(
                 if bundle_dm.result != 0:
                     bundle_dm.WriteError(result.output)
                     bundle_dm.ExitOnError()
-                else:
-                    bundle_dm.WriteVerbose(result.output)
+
+                with bundle_dm.YieldVerboseStream() as stream:
+                    stream.write(result.output)
 
             with dm.Nested(
                 "Copying archive...",
